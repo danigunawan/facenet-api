@@ -1,2 +1,4 @@
 node_modules
-train_img
+core/train_img
+core/pre_img
+core/__pycache__
