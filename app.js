@@ -5,6 +5,7 @@ const logger = require("morgan");
 const bodyParser = require("body-parser");
 
 const uploadRoute = require("./api/routes/upload-route");
+const trainRoute = require("./api/routes/train-route");
 
 app.use(logger("dev"));
 
@@ -35,6 +36,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/upload", uploadRoute);
+app.use("/api/train", trainRoute);
 
 app.use((req, res, next) => {
   const error = new Error("Not found");
