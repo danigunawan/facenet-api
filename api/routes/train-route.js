@@ -6,6 +6,7 @@ router.get("/", (req, res, next) => {
   console.log("Train model requested");
 
   exec("cd core && python3 train_main.py", function(error, stdout, stderr) {
+    console.log(stdout);
     var responseList = stdout.split(/\r?\n/);
 
     var classes = -1,
